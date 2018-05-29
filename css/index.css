@@ -1,0 +1,62 @@
+.blockCenter .title_image_box {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.showTable {
+    position: relative;
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+}
+.showTable hr{
+    position: relative;
+}
+.showTable_body{
+    background-color: #ededed;
+    border: 1px solid #000;
+}
+
+.showTable_title_show {
+    position: relative;
+    display: inline-block;
+    bottom: -1px;
+    border-radius: 5px 5px 0 0;
+    border-bottom: none;
+}
+
+.showTable_title_show>span{
+    font-size: 16px;
+    padding: 8px 10px;
+    display: block;
+    text-shadow: 2px 1px 10px #000;
+}
+
+.showTable_news{
+    padding: 10px;
+    padding-bottom: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.showTable_news>.showTable_line{
+    overflow: hidden;
+}
+.showTable_news>.showTable_line>a>div{
+    float: left;
+}
+
+.showTable_news>.showTable_line>a>.world{
+    width: 80%;
+}
+
+.showTable_news>.showTable_line>a>.time{
+    text-align: right;
+    width: 20%;
+}
+
+.showTable>.showTable_more{
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+}

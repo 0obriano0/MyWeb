@@ -1,0 +1,158 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    font-size: 15px;
+    letter-spacing: 1px;
+    font-family: "Helvetica Neue", Helvetica, Arial, STHeiti, "Microsoft JhengHei", 微軟正黑體, sans-serif;
+    background-image: url(../image/layout/dark137.png);
+}
+ul, ol, li {
+    list-style: none;
+}
+header{
+    position: fixed;
+    width: 100%;
+    height: 2.6rem;
+    z-index: 9999;
+    background-color: rgba(242, 177, 0, 0.20);
+}
+#nav_buttom_menu {
+    display: none;
+}
+.nav{
+    position: absolute;
+    display: block;
+    background-color: rgba(242, 177, 0, 0.76);
+}
+#header_nav {
+    position: absolute;
+    width: auto;
+    right: 0;
+    top: 0;
+    text-align: left;
+    border-radius: 0px 0px 0px 5px;
+    box-shadow: 4px 2px 7px 2px #00000055;
+}
+.nav>.nav_item {
+    display: inline-block;
+    position: relative;
+}
+.nav .nav_item>a {
+    display: block;
+    padding: 0.7rem 1rem;
+    font-size: 1rem;
+    color: #FFF;
+    box-sizing: border-box;
+    font-family: 'cwTeXHei', sans-serif;
+    text-shadow: 2px 1px 10px #000;
+    text-decoration:none;
+}
+.nav .nav_item>a:hover {
+    color: rgba(255, 255, 0);
+}
+.nav .nav_item:hover .nav_second {
+    height: 7.8rem;
+    transition: all 0.8s;
+}
+.nav_second {
+    height: 0px;
+    top: 2.6rem;
+    box-shadow: 1px 1px 0px 0px #00000055;
+    transition: all 0.5s;
+    overflow: hidden;
+    border-radius: 0px 0px 5px 5px;
+}
+
+.main{
+    padding-top: 2.7rem;
+    padding-bottom: 15px;
+    width: 100vw;
+    background-image: url(../image/layout/light479.png);
+}
+
+.blockCenter {
+    max-width: 1900px;
+    width: 90%;
+    margin: 0 auto;
+    min-height: 90px;
+    position: relative;
+    overflow: hidden;
+    min-height: 300px;
+}
+
+.blockCenter img {
+    width: 100%;
+    height: auto;
+}
+
+footer {
+    padding: 10px;
+    text-align: center;
+    font-size: 13px;
+    color: white;
+    box-shadow: 0 -5px 5px #000;
+    -webkit-box-shadow: 0 -5px 5px #000;
+}
+
+@media(max-width: 999px){
+    #nav_buttom_menu { 
+        position: absolute; 
+        bottom: 5px; 
+        left: 5px; 
+        display: block; 
+        cursor:pointer; 
+        z-index: 9999; 
+    }
+    .nav{
+        position: unset;
+    }
+    #header_nav {
+        position: fixed;
+        width: 150px;
+        height: 100vh;
+        top: 0;
+        left: -150px;
+        padding-top: 50px;
+        box-shadow: 0 0px 0 0 #00000000;
+        background-color: rgba(242, 177, 0, 1);
+        transition: left 0.8s;
+        box-sizing: border-box;
+        overflow: scroll;
+        overflow-x:hidden;
+        overflow-y:auto;
+    }
+    .nav .nav_item{ width: 100%; }
+    #header_nav.phone_show{ left: 0px; }
+
+    .nav_second { box-shadow: 0 0px 0 0 #00000000; }
+
+    #header_nav::-webkit-scrollbar {
+        width: 5px;
+    } /* 这是针对缺省样式 (必须的) */
+    #header_nav::-webkit-scrollbar-track {
+        background-color: rgba(0, 0, 0, 0.2);
+    } /* 滚动条的滑轨背景颜色 */
+
+    #header_nav::-webkit-scrollbar-thumb {
+        background-color: rgba(0, 0, 0, 0.2); 
+    } /* 滑块颜色 */
+
+    #header_nav::-webkit-scrollbar-button {
+        background-color: rgba(0, 0, 0, 0.2);
+    } /* 滑轨两头的监听按钮颜色 */
+    #nav_dark{
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        left: -100vw;
+        background-color: rgba(0, 0, 0, 0);
+        transition: all 0.8s;
+    }
+    #nav_dark.nav_dark_show{
+        left: 0px;
+        background-color: rgba(0, 0, 0, 0.5);
+        transition: all 0.8s;
+    }
+}
